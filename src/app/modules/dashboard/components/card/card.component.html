@@ -1,0 +1,9 @@
+<div class="container">
+  <button class="add-button" (click)="handleRequestAddToWatchList(movie.id)">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <button class="details-button" (click)="handleRequestNavigateToDetails(movie.id)">Details</button>
+
+  <img src="https://image.tmdb.org/t/p/w300/{{  movie.poster_path }}" [alt]="movie.title">
+</div>

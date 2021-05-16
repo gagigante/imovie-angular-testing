@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material';
+import { DashboardRoutingModule } from '../../dashboard-routing.module';
 
 import { MenuComponent } from './menu.component';
 
@@ -8,6 +10,10 @@ describe('MenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MatIconModule,
+        DashboardRoutingModule,
+      ],
       declarations: [ MenuComponent ]
     })
     .compileComponents();
