@@ -1,0 +1,21 @@
+<div class="container">
+  <strong>{{sectionTitle}}</strong>
+
+  <!-- TODO: ADD SHIMMER EFFECT -->
+  <div *ngIf="isLoading" class="loading-container">
+    <h1>Carregando...</h1>
+  </div>
+
+  <carousel *ngIf="!isLoading" [cellWidth]="256" [height]="360">
+    <ng-container *ngFor="let movie of movies">
+      <app-card
+        class="carousel-cell"
+        [movie]="movie"
+        (onRequestNavigateToDetails)="handleNavigateToDetails($event)"
+        (onRequestAddToWatchList)="handleAddToWatchList($event)"
+        ></app-card>
+    </ng-container>
+  </carousel>
+</div>
+
+
