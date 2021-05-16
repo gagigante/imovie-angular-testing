@@ -1,9 +1,23 @@
 <div class="app-container">
   <app-menu></app-menu>
 
-  <router-outlet></router-outlet>
+  <main>
+      <div class="section">
+        <app-section class="section" sectionTitle="Popular" sectionType="popular"></app-section>
+      </div>
 
-  <aside>
-    side-content
-  </aside>
+      <div class="section">
+        <app-section class="section" sectionTitle="Now Playing" sectionType="now_playing"></app-section>
+      </div>
+
+      <div class="section">
+        <app-section class="section" sectionTitle="Top Rated" sectionType="top_rated"></app-section>
+      </div>
+
+      <div class="section">
+        <app-section class="section" sectionTitle="Upcoming" sectionType="upcoming"></app-section>
+      </div>
+  </main>
+
+  <app-watch-list></app-watch-list>
 </div>

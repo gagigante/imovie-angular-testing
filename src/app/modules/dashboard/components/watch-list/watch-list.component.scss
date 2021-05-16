@@ -1,0 +1,33 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 0 2rem;
+  width: 280px;
+  height: 100%;
+  border-left: 1px solid #e6e2e2;
+
+  strong {
+    color: #888080;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  div.content {
+    flex: 1;
+    overflow: auto;
+
+    &.empty {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #888080;
+      font-size: 1.5rem;
+    }
+
+    div.item {
+      margin-bottom: 1rem;
+    }
+  }
+}

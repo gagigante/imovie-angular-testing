@@ -1,0 +1,13 @@
+<div class="container" (click)="handleRequestNavigateToDetails(movie.id)">
+  <img src="https://image.tmdb.org/t/p/w300/{{  movie.poster_path }}" [alt]="movie.title">
+
+  <div class="content">
+    <strong>{{ movie.title }}</strong>
+    <span>{{ movieGenres }}</span>
+
+    <span class="vote">
+      <mat-icon>star</mat-icon>
+      {{ movie.vote_average }}
+    </span>
+  </div>
+</div>

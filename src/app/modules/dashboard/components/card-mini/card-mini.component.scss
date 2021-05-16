@@ -1,0 +1,25 @@
+div.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 64px;
+  }
+
+  div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0.4rem;
+
+    strong {
+      color: #9397aa;
+    }
+    span.vote {
+      display: flex;
+      align-items: center;
+      color: #bebcbc;
+    }
+  }
+}

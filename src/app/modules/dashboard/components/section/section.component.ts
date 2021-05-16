@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { WatchListService } from '../../services/watch-list/watch-list.service';
 import { IGetMoviesBySectionDTO, MovieService, sectionType } from '../../services/movie/movie.service';
 
 import { IMovie } from '../../models/IMovie';
 import { Router } from '@angular/router';
-import { WatchListService } from '../../services/watch-list/watch-list.service';
 
 @Component({
   selector: 'app-section',
@@ -37,7 +37,6 @@ export class SectionComponent implements OnInit {
   }
 
   handleNavigateToDetails(movieId: number): void {
-    console.log('entrou')
     this._router.navigate(['dashboard', 'movie', movieId]);
   }
 

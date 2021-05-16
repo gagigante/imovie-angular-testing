@@ -1,0 +1,17 @@
+<div class="container">
+  <strong>Watch List</strong>
+
+  <div *ngIf="watchList.length === 0" class="content empty">
+    <mat-icon>sentiment_dissatisfied</mat-icon>
+    <span>Lista vazia</span>
+  </div>
+
+  <div *ngIf="watchList.length > 0" class="content">
+    <div *ngFor="let item of watchList" class="item">
+      <app-card-mini
+        [movie]="item"
+        (onRequestNavigateToDetails)="handleNavigateToDetails($event)"
+      ></app-card-mini>
+    </div>
+  </div>
+</div>
